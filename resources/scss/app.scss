@@ -1,0 +1,298 @@
+@import '~bootstrap/scss/bootstrap';
+
+.container{
+    width: 80%;
+}
+
+header{
+
+    
+    
+    .bg-azzurro{
+        width: 100%;
+        background-color: dodgerblue;
+        color: white;
+        padding: 0.4em 0;
+        
+        .container-azzurro{
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: end;
+            gap: 2.5em;
+            
+            span{
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .container-list{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        gap: 2em;
+
+        padding-top: 1em;
+
+        .img-container{
+            width: 70px;
+            height: 70px;
+
+            margin-bottom: 1em;
+
+            img{
+                width: 100%;
+            }
+        };
+
+        ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            margin-bottom: 0;
+
+            li{
+                padding: 33px 5px;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 0.8em;
+
+                &.active{
+                    color: dodgerblue;
+                    border-bottom: 4px solid dodgerblue;
+                }
+
+                i{
+                    color: dodgerblue;
+                }
+            }
+
+        }
+
+        input{
+            border:none;
+            border-bottom: 3px solid dodgerblue;
+        }
+    }
+
+    .container-jumbotron{
+        width: 100%;
+        height: 400px;
+
+        background-image: url("../img/jumbotron.jpg");
+        background-size: cover;
+    }
+}
+
+footer{
+    .bg-footer{
+        background-image: url('../img/footer-bg.jpg');
+        background-size: cover;
+        
+        .container{
+            display: flex;
+            justify-content: space-between;
+            color: white;
+
+            height: 400px;
+            .footer-top-left{
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+
+                padding: 2em 0;
+                width: 50%;
+
+                .my-footer-links-container{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 1em;
+
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1em;
+                        list-style-type: none;
+
+                        width: 30%;
+
+                        li.footer-title{
+                            text-transform: uppercase;
+                            color: white;
+                            font-weight: bold;
+                        }
+
+                        li.footer-link{
+                            color: grey;
+                            font-size: 0.8em;
+                        }
+                    }
+                }
+
+                
+            }
+
+            .footer-img-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                height: 100%;
+
+                    
+                
+            }
+        }
+
+    }
+
+    .contacts-bg{
+        width: 100%;
+        padding: 1em 0;
+        background-color: rgb(43, 43, 43);
+
+        .my-footer-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+
+            button{
+                padding: 0.5em 1em;
+                text-transform: uppercase;
+                font-weight: bold;
+                border: 1px solid dodgerblue;
+                background-color: rgb(43,43,43);
+                color: white;
+            }
+
+            .contacts{
+                display: flex;
+                align-items: center;
+                gap: 1em;
+
+                span{
+                    color: dodgerblue;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+            }
+            
+            
+        }
+    }
+}
+
+
+main{
+
+    color: white;
+
+    .main-bg-top{
+        width: 100%;
+        background-color: black;
+        padding: 1em 0;
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            align-items: center;
+
+            position: relative;
+            
+            .current-series{
+                background-color: dodgerblue;
+                padding: 0.3em 0.6em;
+                text-transform: uppercase;
+                font-weight: bold;
+                
+                position: absolute;
+                left: 0;
+                top: -30px;
+            }
+
+            .main-cards-container{
+                display: flex;
+                flex-flow: row wrap;
+                gap: 1em;
+                justify-content: space-between;
+                padding-top: 3em;
+
+                .my-card{
+                    width: calc(100% / 6 - 1em / 6 * 5);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    gap: 1em;
+
+                    .card-img-container{
+                        width: 150px;
+                        height: 150px;                        
+                        overflow: hidden;
+
+                        img{
+                            width: 100%;
+                        }
+                    }
+
+                }
+            }
+
+            .load-more-btn{
+                background-color: dodgerblue;
+                padding: 0.5em 1em;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: white;
+                border: none;
+            }
+            
+        }
+    }
+
+    .main-bg-bot{
+        width: 100%;
+        background-color: dodgerblue;
+        padding: 2em 0;
+
+        .container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2em;
+
+            .img-text-container{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1em;
+
+                .main-bot-img-container{
+                    display: flex;
+                    align-items: center;
+                    width: 50px;
+                    height: 50px;
+                    padding: 0.3em;
+                    
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                span{
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
