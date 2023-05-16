@@ -9,12 +9,14 @@
            
             <div class="main-cards-container">
                 @foreach($comics as $singleComic)
-                <div class="my-card">
-                    <div class="card-img-container">
-                        <img src="{{$singleComic['thumb']}}" alt="comicImage">
+                <a href="{{route('comics.show', $singleComic->id)}}">
+                    <div class="my-card">
+                        <div class="card-img-container">
+                            <img src="{{$singleComic['thumb']}}" alt="comicImage">
+                        </div>
+                        <span>{{$singleComic['title']}}</span>
                     </div>
-                    <span>{{$singleComic['title']}}</span>
-                </div>
+                </a>
                 @endforeach
             </div>
 
