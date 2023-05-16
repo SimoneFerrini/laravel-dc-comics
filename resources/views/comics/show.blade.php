@@ -8,8 +8,8 @@
         <img src="{{$comic->thumb}}" alt="img">
     </div>
     <p>{{$comic->description}}</p>
-    <div>
-        <span>{{$comic->date}}</span>
+    <div class="my-d-flex">
+        <span>{{$comic->sale_date}}</span>
         <span>{{$comic->price}}</span>
     </div>
 </div>

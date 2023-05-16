@@ -41,8 +41,8 @@ class ComicController extends Controller
             ],
         ];
     
-        $mainLinks = config('mainbottomlinks');
         $comics = Comic::all();
+        $mainLinks = config('mainbottomlinks');
         return view('home', compact('links','comics', 'mainLinks'));
     }
 
@@ -53,7 +53,35 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        $links = [
+            [
+                'title' => 'Dc Comics',
+                'linkSingoli' => [
+                    'testo1', 'testo2', 'testo3'
+                ]
+            ],
+            [
+                'title' => 'Dc',
+                'linkSingoli' => [
+                    'testo1', 'testo2', 'testo3'
+                ]
+            ],
+            [
+                'title' => 'Sites',
+                'linkSingoli' => [
+                    'testo1', 'testo2', 'testo3'
+                ]
+            ],
+            [
+                'title' => 'Shop',
+                'linkSingoli' => [
+                    'testo1', 'testo2', 'testo3'
+                ]
+            ],
+        ];
+    
+        $comics = Comic::all();
+        return view('comics/create', compact('links','comics'));
     }
 
     /**

@@ -21,7 +21,9 @@
             </div>
 
             <div>
-                <button class="load-more-btn">load more</button>
+               <a href="{{route('comics.create')}}">
+                   <button class="load-more-btn">load more</button>
+                </a>
             </div>
 
         </div>
