@@ -14,7 +14,36 @@ class ComicController extends Controller
      */
     public function index()
     {
-        //
+        $links = [
+            [
+                'title' => 'Dc Comics',
+                'linkSingoli' => [
+                    'testo1', 'testo2', 'testo3'
+                ]
+            ],
+            [
+                'title' => 'Dc',
+                'linkSingoli' => [
+                    'testo1', 'testo2', 'testo3'
+                ]
+            ],
+            [
+                'title' => 'Sites',
+                'linkSingoli' => [
+                    'testo1', 'testo2', 'testo3'
+                ]
+            ],
+            [
+                'title' => 'Shop',
+                'linkSingoli' => [
+                    'testo1', 'testo2', 'testo3'
+                ]
+            ],
+        ];
+    
+        $mainLinks = config('mainbottomlinks');
+        $comics = Comic::all();
+        return view('home', compact('links','comics', 'mainLinks'));
     }
 
     /**
