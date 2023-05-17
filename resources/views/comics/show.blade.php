@@ -13,8 +13,14 @@
         <span>{{$comic->price}}</span>
     </div>
     <a href="{{route('comics.edit', $comic->id)}}">
-        <button>Aggiorna</button>
+        <button class="btn btn-primary">Aggiorna</button>
     </a>
+
+    <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+        @csrf
+        @method('DELETE');
+            <button class="btn btn-danger" type="submit">Elimina</button>
+    </form>
 </div>
     
 @endsection
