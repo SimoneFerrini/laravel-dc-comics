@@ -14,36 +14,10 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $links = [
-            [
-                'title' => 'Dc Comics',
-                'linkSingoli' => [
-                    'testo1', 'testo2', 'testo3'
-                ]
-            ],
-            [
-                'title' => 'Dc',
-                'linkSingoli' => [
-                    'testo1', 'testo2', 'testo3'
-                ]
-            ],
-            [
-                'title' => 'Sites',
-                'linkSingoli' => [
-                    'testo1', 'testo2', 'testo3'
-                ]
-            ],
-            [
-                'title' => 'Shop',
-                'linkSingoli' => [
-                    'testo1', 'testo2', 'testo3'
-                ]
-            ],
-        ];
     
         $comics = Comic::all();
         $mainLinks = config('mainbottomlinks');
-        return view('home', compact('links','comics', 'mainLinks'));
+        return view('home', compact('comics', 'mainLinks'));
     }
 
     /**
@@ -53,35 +27,10 @@ class ComicController extends Controller
      */
     public function create()
     {
-        $links = [
-            [
-                'title' => 'Dc Comics',
-                'linkSingoli' => [
-                    'testo1', 'testo2', 'testo3'
-                ]
-            ],
-            [
-                'title' => 'Dc',
-                'linkSingoli' => [
-                    'testo1', 'testo2', 'testo3'
-                ]
-            ],
-            [
-                'title' => 'Sites',
-                'linkSingoli' => [
-                    'testo1', 'testo2', 'testo3'
-                ]
-            ],
-            [
-                'title' => 'Shop',
-                'linkSingoli' => [
-                    'testo1', 'testo2', 'testo3'
-                ]
-            ],
-        ];
+        
     
         $comics = Comic::all();
-        return view('comics/create', compact('links','comics'));
+        return view('comics/create', compact('comics'));
     }
 
     /**
@@ -93,9 +42,9 @@ class ComicController extends Controller
     public function store(Request $request)
     {   
 
-        $formdata = $request->all();
+        $formData = $request->all();
         $newComic = new Comic();
-        $newComic->fill($formdata);
+        $newComic->fill($formData);
 
         $newComic->save();
         return redirect()->route('comics.show', $newComic->id);
@@ -109,33 +58,7 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        $links = [
-            [
-                'title' => 'Dc Comics',
-                'linkSingoli' => [
-                    'testo1', 'testo2', 'testo3'
-                ]
-            ],
-            [
-                'title' => 'Dc',
-                'linkSingoli' => [
-                    'testo1', 'testo2', 'testo3'
-                ]
-            ],
-            [
-                'title' => 'Sites',
-                'linkSingoli' => [
-                    'testo1', 'testo2', 'testo3'
-                ]
-            ],
-            [
-                'title' => 'Shop',
-                'linkSingoli' => [
-                    'testo1', 'testo2', 'testo3'
-                ]
-            ],
-        ];
-        return view('comics/show', compact('comic', 'links'));
+        return view('comics/show', compact('comic'));
     }
 
     /**
@@ -146,7 +69,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        return view('comics/edit', compact('comic'));
     }
 
     /**
@@ -158,7 +81,13 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        
+        $formData =$request->all();
+        $comic->update($formData);
+
+        $comic->save();
+
+        return redirect()->route('comics.show', $comic->id);
+
     }
 
     /**

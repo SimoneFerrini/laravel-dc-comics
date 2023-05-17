@@ -12,6 +12,9 @@
         <span>{{$comic->sale_date}}</span>
         <span>{{$comic->price}}</span>
     </div>
+    <a href="{{route('comics.edit', $comic->id)}}">
+        <button>Aggiorna</button>
+    </a>
 </div>
     
 @endsection

@@ -5,14 +5,31 @@
             <div class="footer-top-left">
                 <div class="my-footer-links-container">
 
-                    @foreach($links as $singleLink)
+                   
                     <ul>
-                        <li class="footer-title">{{$singleLink['title']}}</li>
-                        @foreach($singleLink['linkSingoli'] as $link)
-                        <li class="footer-link">{{$link}}</li>
-                        @endforeach
-                    </ul>
-                    @endforeach
+                        <li class="footer-title">Dc Comics</li>
+                                                <li class="footer-link">testo1</li>
+                                                <li class="footer-link">testo2</li>
+                                                <li class="footer-link">testo3</li>
+                                            </ul>
+                                        <ul>
+                        <li class="footer-title">Dc</li>
+                                                <li class="footer-link">testo1</li>
+                                                <li class="footer-link">testo2</li>
+                                                <li class="footer-link">testo3</li>
+                                            </ul>
+                                        <ul>
+                        <li class="footer-title">Sites</li>
+                                                <li class="footer-link">testo1</li>
+                                                <li class="footer-link">testo2</li>
+                                                <li class="footer-link">testo3</li>
+                                            </ul>
+                                        <ul>
+                        <li class="footer-title">Shop</li>
+                                                <li class="footer-link">testo1</li>
+                                                <li class="footer-link">testo2</li>
+                                                <li class="footer-link">testo3</li>
+                                            </ul>
                 </div>
                 <span>tutti i diritti sono miei copyright etc</span>
 
