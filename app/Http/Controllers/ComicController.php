@@ -96,6 +96,8 @@ class ComicController extends Controller
         $formdata = $request->all();
         $newComic = new Comic();
         $newComic->fill($formdata);
+
+        $newComic->save();
         return redirect()->route('comics.show', $newComic->id);
     }
 
